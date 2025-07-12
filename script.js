@@ -1,3 +1,4 @@
+// Your Firebase config
 const firebaseConfig = {
   apiKey: "YOUR_API_KEY",
   authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
@@ -19,7 +20,7 @@ function submitName() {
   database.ref("sharedName").set(name);
 }
 
-// Listen for changes
+// Listen for changes in the database
 database.ref("sharedName").on("value", (snapshot) => {
   const name = snapshot.val();
   output.textContent = name ? "Hello, " + name + "!" : "";
