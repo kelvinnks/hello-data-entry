@@ -1,12 +1,12 @@
-// Your Firebase config
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  databaseURL: "https://YOUR_PROJECT_ID-default-rtdb.firebaseio.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyCcUrLlCuccAtEDE0Ep2m65EtBwBX0fzAU",
+  authDomain: "hello-data-entry.firebaseapp.com",
+  databaseURL: "https://hello-data-entry-default-rtdb.firebaseio.com",
+  projectId: "hello-data-entry",
+  storageBucket: "hello-data-entry.firebasestorage.app",
+  messagingSenderId: "856905908671",
+  appId: "1:856905908671:web:fc450024b72c82d0dea10a",
+  measurementId: "G-8PW1TRQKSL"
 };
 
 // Initialize Firebase
@@ -20,7 +20,7 @@ function submitName() {
   database.ref("sharedName").set(name);
 }
 
-// Listen for changes in the database
+// Listen for changes
 database.ref("sharedName").on("value", (snapshot) => {
   const name = snapshot.val();
   output.textContent = name ? "Hello, " + name + "!" : "";
