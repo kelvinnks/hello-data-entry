@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8" />
-  <title>Hello World Data Entry</title>
+  <title>Realtime Hello World</title>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js"></script>
+  <script src="script.js" defer></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Hello World Data Entry</h1>
+  <h1>Realtime Hello World</h1>
   <input type="text" id="nameInput" placeholder="Enter your name" />
-  <button onclick="sayHello()">Submit</button>
+  <button onclick="submitName()">Submit</button>
   <p id="output"></p>
-
-  <script src="script.js"></script>
 </body>
 </html>
